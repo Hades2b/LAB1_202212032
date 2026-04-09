@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab1_20221203">
         <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectorActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

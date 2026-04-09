@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_dificultad"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Dificultad: "
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_puntaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puntaje: 0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Pregunta?"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_resultado_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_opcion_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 1"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:onClick="seleccionarOpcion" />
+
+            <Button
+                android:id="@+id/btn_opcion_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 2"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:onClick="seleccionarOpcion" />
+
+            <Button
+                android:id="@+id/btn_opcion_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 3"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:onClick="seleccionarOpcion" />
+
+            <Button
+                android:id="@+id/btn_opcion_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 4"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:onClick="seleccionarOpcion" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btn_anterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anterior"
+                android:onClick="irAnterior"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/btn_pista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pista"
+                android:onClick="usarPista"
+                android:backgroundTint="@color/amarillo_text"
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/btn_siguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                android:onClick="irSiguiente"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
